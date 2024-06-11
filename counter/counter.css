@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    *{
+      font-family: "Orbitron", sans-serif;
+      color: white;
+    }
+    body{
+      text-align: center;
+      background-color: #323232;
+    }
+    h1{
+      font-size: 50px;
+    }
+    #counter{
+      font-size: 150px;
+    }
+    button{
+      background-color: rgb(103, 214, 84);
+      border: 2px solid black;
+      color:rgb(0, 0, 0);
+      padding: 10px;
+      margin: 50px 10px;
+    }
+    button:hover{
+      background-color: rgb(132, 206, 119);
+    }
