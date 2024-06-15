@@ -1,81 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000");
 
 * {
-    font-family: "Nunito Sans", sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: rgb(0, 0, 0);
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
 }
 
-body{
-    background-color: rgb(232, 232, 232);
+body {
+  background-color: rgb(232, 232, 232);
 }
 
-.gen-cont{
-    border: 1px solid rgb(166, 166, 166);
-    background-color: white;
-    width: 60%;
-    margin: 0 auto;
-    padding: 50px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+.gen-cont {
+  border: 1px solid rgb(166, 166, 166);
+  background-color: white;
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-.num-container{
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10%;
+.num-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
 }
 
-.nums{
-    padding: 10px 25px;
-    background-color: rgb(255, 255, 255);
-    font-size: 25px;
-    border: 2px solid rgb(27, 43, 222);
-    border-radius: 20px;
-    margin: 10px;
+.nums {
+  padding: 10px 25px;
+  background-color: rgb(255, 255, 255);
+  font-size: 25px;
+  border: 2px solid rgb(27, 43, 222);
+  border-radius: 20px;
+  margin: 10px;
 }
 
 .maxBtn {
-    padding-top: 50px;
-    padding-bottom: 40px;
-    border-radius: 10px;
-    width: 80%;
-    margin: 0 auto;
-    color: black;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  color: black;
 }
 
-input{
-    width: 100%;
-    border: 2px solid rgb(173, 173, 173);
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 10px;
+input {
+  width: 100%;
+  border: 2px solid rgb(173, 173, 173);
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-input:hover{
-    border: 2px solid rgb(122, 121, 121);
+input:hover {
+  border: 2px solid rgb(122, 121, 121);
 }
 
-input:focus{
-    outline: none !important; 
-    border: 2px solid rgb(27, 43, 222);
+input:focus {
+  outline: none !important;
+  border: 2px solid rgb(27, 43, 222);
 }
 
-button{
-    border: none !important;
-    background-color: rgb(27, 43, 222);
-    width: 100%;
-    padding: 5px;
-    border-radius: 10px;
-    color: white;
+button {
+  border: none !important;
+  background-color: rgb(27, 43, 222);
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
 }

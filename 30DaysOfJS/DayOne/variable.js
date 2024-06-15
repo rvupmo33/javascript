@@ -2,7 +2,7 @@
 const message = `Welcome!`;
 const isLoggedIn = true;
 let password;
-let emptyValue = null
+let emptyValue = null;
 
 // Declare four variables without assigning values
 let var1;
@@ -19,12 +19,16 @@ let var8 = 4;
 // Declare variables to store your first name, last name, marital status, country and age in multiple lines
 let fName = "Fname";
 let lName = "Lname";
-let maritalStatus = 'Mstatus';
-let country = 'Country';
-let age = 'Age';
+let maritalStatus = "Mstatus";
+let country = "Country";
+let age = "Age";
 
 // Declare variables to store your first name, last name, marital status, country and age in a single line
-let fName2 = 'Fname2', lName2 = 'Lname2', maritalStatus2 = 'Mstatus2', country2 = 'Country2', age2 = 'Age2';
+let fName2 = "Fname2",
+  lName2 = "Lname2",
+  maritalStatus2 = "Mstatus2",
+  country2 = "Country2",
+  age2 = "Age2";
 
 // Declare two variables myAge and yourAge and assign them initial values and log to the browser console.
 let myAge = 18;

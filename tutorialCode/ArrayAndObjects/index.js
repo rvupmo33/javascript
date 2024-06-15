@@ -70,57 +70,52 @@ console.log(introducer('Vue', 'green'));
 
 const letterCounter = () => {
   let result = 0;
-  for (letter in phrase){
-    console.log(Number(letter)+1);
-    result = Number(letter) + 1
+  for (letter in phrase) {
+    console.log(Number(letter) + 1);
+    result = Number(letter) + 1;
   }
-  return {result}
-}
+  return { result };
+};
 
-const phrase = 'Just because you say because doesnt mean because!';
+const phrase = "Just because you say because doesnt mean because!";
 // console.log(letterCounter(phrase));
-
-
 
 const sumArray = (numbers) => {
   let result = 0;
-  for (num of numbers){
+  for (num of numbers) {
     console.log(num);
     result = result + num;
   }
-  return{result}
-}
+  return { result };
+};
 // const numbers = [5,10,15,20];
 // console.log(sumArray(numbers));
 
-
 // Use OF For numbers and IN For char
-
 
 // Do it yourself
 
 const NewSumArray = (numbers) => {
   result = 0;
-  for(num of numbers){
+  for (num of numbers) {
     console.log(num);
     result = result + num;
   }
-  return {result}
-}
+  return { result };
+};
 
 // const numbers = [3,6,9,12,15,18];
 // console.log(NewSumArray(numbers));
 
-
 const findMax = (numbers) => {
   let result = numbers[0];
-  for(number of numbers){
-    if(number > result){
-      result = number
+  for (number of numbers) {
+    if (number > result) {
+      result = number;
     }
   }
   return result;
-}
+};
 
 // const numbers = [1,2,3,4,5];
 // console.log(findMax(numbers));
@@ -128,15 +123,15 @@ const findMax = (numbers) => {
 const letterFrequency = (phrase) => {
   console.log(phrase);
   let frequency = {};
-  for(const letter of phrase){
-    if (letter in frequency){
+  for (const letter of phrase) {
+    if (letter in frequency) {
       frequency[letter]++;
     } else {
-      frequency[letter] = 1
+      frequency[letter] = 1;
     }
   }
-  return frequency
-}
+  return frequency;
+};
 // console.log(letterFrequency('haha'));
 
 // incremental operators ++, -- , +=, -=
