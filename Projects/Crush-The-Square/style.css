@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+main {
+  background-color: rgb(220, 220, 220);
+  border: 2px solid rgb(178, 177, 177);
+  border-radius: 10px;
+  height: 620px;
+  margin-bottom: 50px;
+}
+
+main h3 {
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+header img {
+  margin-top: 20px;
+  width: 450px;
+}
+
+.hidden {
+  display: none;
+}
+
+.screen {
+  margin: 0 auto;
+  height: 550px;
+  width: 700px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.square {
+  background-color: red;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+}
+
+.start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start p {
+  font-size: 50px;
+}
+
+.start p:hover {
+  cursor: pointer;
+}
+
+.fixed-elements .popup {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgb(194, 32, 32);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu {
+  background-color: rgb(190, 190, 190);
+  padding: 30px;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menuHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu audio {
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin: 10px 0px;
+}
+
+.menu #closeBtn {
+  cursor: pointer;
+}
+
+.menu hr {
+  margin: 10px 0px;
+}
+
+.menu ol {
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+
+.restartMenu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 200px;
+  background-color: rgb(220, 220, 220);
+  border: 2px solid rgb(178, 177, 177);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.restartMenu button {
+  padding: 10px;
+  font-size: 20px;
+  width: 300px;
+  border-radius: 50px;
+  border: 1px solid black;
+  margin: 20px 0px;
+  transition: 0.2s;
+}
+
+.restartMenu button:hover {
+  background-color: rgb(160, 160, 160);
+}
