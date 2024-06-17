@@ -28,13 +28,13 @@ header {
 }
 
 nav {
-  width: 30%;
   margin-right: 50px;
 }
 
 nav ul {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 nav a {
