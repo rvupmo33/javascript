@@ -1,53 +1,52 @@
 const user = {
-    username: "rando1",
-    price: 2,
+  username: "rando1",
+  price: 2,
 
-    welcomeMessage: function() {
-        console.log(`${this.username}, welcome to our website!`);
-        console.log(this);
-    }
+  welcomeMessage: function () {
+    console.log(`${this.username}, welcome to our website!`);
+    console.log(this);
+  },
+};
+
+user.welcomeMessage();
+user.username = "rando1gonemad";
+user.welcomeMessage();
+
+console.log(this);
+
+function chai() {
+  let username = "jellyfish";
+  console.log(this.username);
 }
 
-// user.welcomeMessage();
-// user.username = "rando1gonemad"
-// user.welcomeMessage();
+chai();
 
+const chai = function () {
+  let username = "jellyfish";
+  console.log(this.username);
+};
 
-// console.log(this);
-
-// function chai(){
-//     let username = "jellyfish"
-//     console.log(this.username);
-// }
-
-// chai();
-
-// const chai = function () {
-//     let username = "jellyfish"
-//     console.log(this.username);
-// }
-
-// chai()
+chai();
 
 //arrow functions
 
-const chai = ()  => {
-    let username = "jellyfish"
-    console.log(this);
-}
+const chai = () => {
+  let username = "jellyfish";
+  console.log(this);
+};
 
-// chai()
+chai();
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2;
-// }
+const addTwo = (num1, num2) => {
+  return num1 + num2;
+};
 
 // const addTwo = (num1, num2) => num1 + num2;
 
-// const addTwo = (num1,num2) => ({username: "jellyfish"})
+// const addTwo = (num1, num2) => ({ username: "jellyfish" });
 
-// console.log(addTwo(3,4));
+console.log(addTwo(3, 4));
 
-// const myArr = [2,5,6,7,8];
+const myArr = [2, 5, 6, 7, 8];
 
-// myArr.forEach(() => {});
+myArr.forEach(() => {});
