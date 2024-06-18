@@ -5,9 +5,24 @@ currentTime.textContent = date.toLocaleDateString();
 
 //
 
-let listItem = document.querySelectorAll(".item");
-let removeBtn = document.getElementById("RemoveItem");
 let itemContainer = document.querySelector(".taskContainer");
+let inputBtn = document.getElementById("inputBtn");
+let testUl = document.getElementById("testUl");
+
+inputBtn.addEventListener("click", () => {
+  let taskInput = document.getElementById("inputField").value;
+  if (taskInput === "") {
+    alert("Input must be present");
+  } else {
+    let list = document.createElement("li");
+    list.innerHTML = `
+              <p class="item">${taskInput}</p>
+              <p id="RemoveItem">X</p>
+              `;
+    testUl.prepend(list);
+    document.getElementById("inputField").value = "";
+  }
+});
 
 itemContainer.addEventListener("click", function (e) {
   if (e.target.classList.contains("item")) {

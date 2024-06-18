@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
+@keyframes upNdown {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +54,9 @@ header {
 
 .Heading img {
   width: 80px;
+  animation-name: upNdown;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .Heading p {
@@ -71,7 +84,7 @@ header {
 }
 
 .taskContainer li {
-  background-color: #201d1d;
+  background-color: #562121;
   border-radius: 25px;
   padding: 15px 30px;
   display: flex;
@@ -111,12 +124,47 @@ header {
   text-decoration: line-through !important;
 }
 
+.inputTask {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
 input {
   width: 100%;
   padding: 20px;
-  margin-bottom: 10px;
   border: none;
   border: 2px solid #450a0a;
   border-radius: 20px;
   color: #450a0a;
+}
+
+.inputTask button {
+  padding: 15px 30px;
+  border: 2px solid #4c4242;
+  background-color: #272121;
+  margin-right: 10px;
+  color: #ffffff;
+  right: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .Heading h1 {
+    font-size: 35px;
+  }
+  .Heading p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 540px) {
+  .Heading h1 {
+    font-size: 30px;
+  }
+  .Heading p {
+    font-size: 13px;
+  }
 }
