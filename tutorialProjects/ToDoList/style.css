@@ -71,8 +71,6 @@ ul li {
   user-select: none;
   cursor: pointer;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 ul li::before {
