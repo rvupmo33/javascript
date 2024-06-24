@@ -1,7 +1,10 @@
-let accordian = document.querySelectorAll(".accordian");
-let question = document.querySelector(".question")
-let answer = document.querySelector(".answer")
+let accordianContainer = document.querySelector(".accordianContainer");
 
-question.addEventListener("click", function Show(e){
-  if(e.target.class)
+accordianContainer.addEventListener("click", function toggle(e){
+  if(e.target.closest(".question")){
+    let accordian = e.target.closest(".accordian")
+    let question = e.target.closest(".question")
+    let answer = accordian.querySelector(".answer")
+    answer.classList.toggle('hidden');
+  }
 })

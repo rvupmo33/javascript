@@ -9,11 +9,16 @@
 }
 
 body{
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(238, 214, 134);
+}
+
+.intro-text{
+  margin-bottom: 20px;
 }
 
 .accordianContainer{
   background-color: rgb(255, 255, 255);
+  border-radius: 15px;
   margin: 0 auto;
   width: 85%;
   max-width: 600px;
@@ -25,8 +30,14 @@ body{
 }
 
 .accordian{
-  background-color: rgb(249, 249, 249);
+  background-color: rgb(235, 235, 235);
   padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.accordian p{
+  padding-top: 10px;
 }
 
 .accordian .question{
