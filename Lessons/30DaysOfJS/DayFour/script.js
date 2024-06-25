@@ -103,6 +103,48 @@ function gradeChecker(){
 
 // June, July or August, the season is Summer
 
+function seasonChecker(){
+  let userInput = prompt("Enter a month: ")
+  switch (userInput.toLowerCase()){
+    case 'september':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Autumn`);
+      break;
+    case 'october':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Autumn`);
+      break;
+    case 'november':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Autumn`);
+      break;
+    case 'december':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Winter`);
+      break;
+    case 'january':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Winter`);
+      break;
+    case 'february':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Winter`);
+      break;
+    case 'march':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Spring`);
+      break;
+    case 'april':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Spring`);
+      break;
+    case 'may':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Spring`);
+      break;
+    case 'june':
+    console.log(`In the month of ${userInput.toLowerCase()} it is Summer`);
+    break;
+    case 'july':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Summer`);
+      break;
+    case 'august':
+      console.log(`In the month of ${userInput.toLowerCase()} it is Summer`);
+      break;
+  }
+}
+
 // Check if a day is weekend day or a working day. Your script will take day as an input.
         // What is the day  today? Saturday
         // Saturday is a weekend.
@@ -115,6 +157,33 @@ function gradeChecker(){
 
         // What is the day today? FrIDAy
         // Friday is a working day.
+
+function dayChecker(){
+  let userInput = prompt("What is the day today? ")
+  switch(userInput.toLowerCase()){
+    case 'monday':
+      console.log('Monday is a working day.')
+      break
+    case 'tuesday':
+      console.log('Tuesday is a working day.')
+      break
+    case 'wednesday':
+      console.log('Wednesday is a working day.')
+      break
+    case 'thursday':
+      console.log('Thursday is a working day.')
+      break
+    case 'friday':
+      console.log('Friday is a working day.')
+      break
+    case 'saturday':
+      console.log('Saturday is a weekend.')
+      break
+    case 'sunday':
+      console.log('Sunday is a weekend.')
+      break
+  }
+}
 
 // Exercises: Level 3
 
@@ -131,6 +200,95 @@ function gradeChecker(){
         // Enter a month: FEbruary
         // February has 28 days.
 
+function numberOfDaysChecker(){
+  let userInput = prompt("Enter a month: ")
+  switch (userInput.toLowerCase()){
+    case 'january':
+      console.log('January has 31 days.');
+      break
+    case 'february':
+      console.log('February has 28 days.');
+      break
+    case 'march':
+      console.log('March has 31 days.');
+      break
+    case 'april':
+      console.log('April has 30 days.');
+      break
+    case 'may':
+      console.log('May has 31 days.');
+      break
+    case 'june':
+      console.log('June has 30 days.');
+      break
+    case 'july':
+      console.log('July has 31 days.');
+      break
+    case 'august':
+      console.log('August has 31 days.');
+      break
+    case 'september':
+      console.log('September has 30 days.');
+      break
+    case 'october':
+      console.log('October has 31 days.');
+      break
+    case 'november':
+      console.log('November has 30 days.');
+      break
+    case 'december':
+      console.log('December has 31 days.');
+      break
+  }
+}
+
 // Write a program which tells the number of days in a month, now consider leap year.
 
- 
+function numberOfDaysChecker(){
+  let currentYear = new Date().getFullYear()
+  let userInput = prompt("Enter a month: ")
+  switch (userInput.toLowerCase()){
+    case 'january':
+      console.log('January has 31 days.');
+      break
+    case 'february':
+      if (currentYear % 4 == 0 || currentYear % 400 == 0){
+        console.log('February has 29 days.');
+      } else if(currentYear % 100 == 0){
+        console.log('February has 28 days.');
+      } else {
+        console.log('February has 28 days.');
+      }
+      break
+    case 'march':
+      console.log('March has 31 days.');
+      break
+    case 'april':
+      console.log('April has 30 days.');
+      break
+    case 'may':
+      console.log('May has 31 days.');
+      break
+    case 'june':
+      console.log('June has 30 days.');
+      break
+    case 'july':
+      console.log('July has 31 days.');
+      break
+    case 'august':
+      console.log('August has 31 days.');
+      break
+    case 'september':
+      console.log('September has 30 days.');
+      break
+    case 'october':
+      console.log('October has 31 days.');
+      break
+    case 'november':
+      console.log('November has 30 days.');
+      break
+    case 'december':
+      console.log('December has 31 days.');
+      break
+  }
+}
