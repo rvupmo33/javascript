@@ -1,10 +1,24 @@
-
-
 *{
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.heading{
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.stats{
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .chart {
@@ -14,14 +28,10 @@
 
 li{
   font-size: 30px;
-}
-
-.stats{
-  width: 600px;
-  display: flex;
+  border: 2px solid black;
   padding: 10px;
-  justify-content: space-between;
-  position: relative;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .chart h1{
@@ -31,4 +41,23 @@ li{
   line-height: 100%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+.button-container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  border: 2px solid black;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 20px;
+}
+
+button:hover{
+  background-color: aliceblue;
 }
