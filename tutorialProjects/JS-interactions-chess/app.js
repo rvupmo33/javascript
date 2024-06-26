@@ -39,4 +39,5 @@ function dragEnd(e){
 
 function dragDrop(e){
   e.target.append(beingDragged)
+  infoDisplay.textContent = ""
 }
