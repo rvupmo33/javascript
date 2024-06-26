@@ -1,0 +1,34 @@
+
+
+*{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.chart {
+  width: 300px;
+  position: relative;
+}
+
+li{
+  font-size: 30px;
+}
+
+.stats{
+  width: 600px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.chart h1{
+  position: absolute;
+  top: 50%;
+  font-size: 60px;
+  line-height: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

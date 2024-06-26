@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto updated chart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 class="heading">Project Status</h2>
+  <div class="stats">
+    <div class="chart">
+      <canvas id="myChart"></canvas>
+      <h1 id="totalProjectMiddleLabel">1</h1>
+    </div>
+    <div class="details">
+      <ul>
+        <li>To be started: <span id="toBeStartedSideLabel">1</span></li>
+        <li>In process: <span id="inProcessSideLabel">0</span></li>
+        <li>Completed: <span id="completedSideLabel">0</span></li>
+      </ul>
+    </div>
+  </div>
+  <button id="addBtn" onclick="addProject()">Add Project</button>
+  <button id="processBtn" onclick="processProject()">Start Project</button>
+  <button id="completeBtn" onclick="completeProject()">Complete Project</button>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
