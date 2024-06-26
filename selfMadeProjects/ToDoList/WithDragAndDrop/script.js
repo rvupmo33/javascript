@@ -9,6 +9,8 @@ addTaskBtn.addEventListener("click", function addTask(){
     console.log(userInput);
     console.log('Hello');
     let newli = document.createElement("li");
+    newli.classList.add("listitem")
+    newli.draggable = true;
     newli.innerHTML = 
         ` 
           <p class="list-text">
@@ -18,8 +20,10 @@ addTaskBtn.addEventListener("click", function addTask(){
             x
           </p>
       `
+
       list.prepend(newli);
       document.querySelector(".userInput").value = ' ';
+
       saveTasks();
   }
 })
@@ -49,3 +53,27 @@ function loadTasks(){
 }
 
 loadTasks()
+
+let newli = document.querySelectorAll(".listitem")
+
+newli.forEach(newl => {
+  newl.addEventListener("dragstart", (e) =>{
+    newl.classList.add("dragging")
+  })
+  newl.addEventListener("dragend", (e)=>{
+    newl.classList.remove("dragging")
+  })
+})
+
+const sortableList = (e) => {
+  e.preventDefault();
+  const draggedItem = list.querySelector(".dragging")
+  const siblings = [...list.querySelectorAll(".listitem:not(.dragging)")]
+
+  let nextSibling = siblings.find(sibling => {
+    return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+  })
+  list.insertBefore(draggedItem, nextSibling)
+}
+
+list.addEventListener("dragover", sortableList);
