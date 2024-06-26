@@ -2,14 +2,14 @@ const king = document.querySelector(".chess-piece");
 const squares = document.querySelectorAll(".square");
 const infoDisplay = document.querySelector("#info");
 
-king.addEventListener("drag", dragging)
-king.addEventListener("dragstart", dragStart)
+king.addEventListener("drag", dragging);
+king.addEventListener("dragstart", dragStart);
 
 squares.forEach(square => {
-  square.addEventListener("dragover", dragOver)
-  square.addEventListener("dragenter", dragEnter)
-  square.addEventListener("drop", dragDrop)
-  square.addEventListener("dragend", dragEnd)
+  square.addEventListener("dragover", dragOver);
+  square.addEventListener("dragenter", dragEnter);
+  square.addEventListener("drop", dragDrop);
+  square.addEventListener("dragend", dragEnd);
 })
 
 let beingDragged;
@@ -21,7 +21,7 @@ function dragStart(e){
 
 function dragging(){
   console.log("You are dragging a " + beingDragged.id);
-  infoDisplay.textContent = "You are dragging a " + beingDragged.id
+  infoDisplay.textContent = "You are dragging a " + beingDragged.id;
 }
 
 function dragOver(e){
@@ -38,6 +38,6 @@ function dragEnd(e){
 }
 
 function dragDrop(e){
-  e.target.append(beingDragged)
-  infoDisplay.textContent = ""
+  e.target.append(beingDragged);
+  infoDisplay.textContent = "";
 }
