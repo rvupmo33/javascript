@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+@keyframes upNdown {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  list-style: none;
+  color: white;
+  font-weight: 200;
+}
+
+body{
+  background-color: rgb(23, 22, 18);
+}
+
+header{
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header img{
+  width: 100px;
+  animation-name: upNdown;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+header h1{
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+header p{
+  font-size: 20px;
+}
+
+.container{
+  background-color: rgb(221, 221, 221);
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+ul{
+  margin-top: 10px;
+}
+
+ul li{
+  border-radius: 10px;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #562121;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-text{
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.crossed{
+  text-decoration: line-through;
+}
+
+.addTask{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+
+input{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid black;
+  color: black;
+  padding: 0px 30px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+input:focus{
+  outline: none;
+}
+
+button{
+  color: #ffffff;
+  background-color: #562121;
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid black;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover{
+  background-color: #722c2c;
+}
+
+#RemoveItem{
+  font-size: 30px;
+  padding: 0px 13px;
+  margin: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#RemoveItem:hover{
+  transform: scale(1.2);
+}
