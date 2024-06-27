@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+  const images = ['rainbow.jpg','rainbow-2.jpg']
+
+  async function catchRainbow(images){
+    for(let filename of images){
+      const response = await fetch(filename);
+      const blob = await response.blob();
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(blob);
+      img.width = '200';
+      document.body.append(img)
+      console.log("Hi!");
+    }
+  }
+
+  catchRainbow(images)
+
+  </script>
+</body>
+</html>
