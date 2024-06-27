@@ -23,9 +23,12 @@ async function getISS() {
 
   // L.marker([latitude, longitude]).addTo(map);
   marker.setLatLng([latitude, longitude]);
+  map.setView([latitude, longitude], 5);
 
-  document.getElementById("lat").textContent = latitude;
-  document.getElementById("lon").textContent = longitude;
+  document.getElementById("lat").textContent = latitude.toFixed(2) + "°";
+  document.getElementById("lon").textContent = longitude.toFixed(2) + "°";
 }
+
+getISS();
 
 setInterval(getISS, 1000);
