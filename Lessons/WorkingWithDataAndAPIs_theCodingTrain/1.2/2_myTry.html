@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch and Graph CSV Data in Console</title>
+</head>
+<body>
+  
+  <script>
+    callData();
+    async function callData(){
+      const response = await fetch('ZonAnn.Ts+dSST.csv');    
+      const data = await response.text();
+
+      const table = data.split('\n')
+      table.forEach(tab => {
+        const columns = tab.split(',')
+        const years = columns[0];
+        const row1 = columns[1]
+        const row2 = columns[2];
+        console.log(`${years} | ${row1} | ${row2}`);
+      })
+    }
+  </script>
+</body>
+</html>
