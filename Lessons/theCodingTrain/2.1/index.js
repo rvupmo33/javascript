@@ -9,17 +9,21 @@ app.use(express.json({ limit: "1mb" }));
 const database = new Datastore("database.db");
 database.loadDatabase();
 
+app.get("/api", (request, response) => {
+  database.find({}, (err, data) => {
+    if (err) {
+      response.end();
+      return;
+    }
+    response.json(data);
+  });
+});
+
 app.post("/api", (request, response) => {
   console.log("I got a request!");
-  // console.log(request.body);
   const data = request.body;
   const timeStamp = Date.now();
   data.timeStamp = timeStamp;
   database.insert(data);
-  response.json({
-    status: "success",
-    timestamp: timeStamp,
-    latitude: data.lat,
-    longitude: data.lon,
-  });
+  response.json(data);
 });
