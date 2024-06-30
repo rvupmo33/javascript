@@ -2,7 +2,7 @@ const express = require("express");
 const Datastore = require("nedb");
 
 const app = express();
-app.listen(3000, () => console.log("Server is listening on port 3000"));
+app.listen(3000, () => console.log("listening at 3000"));
 app.use(express.static("public"));
 app.use(express.json({ limit: "1mb" }));
 
@@ -20,10 +20,9 @@ app.get("/api", (request, response) => {
 });
 
 app.post("/api", (request, response) => {
-  console.log("I got a request!");
   const data = request.body;
-  const timeStamp = Date.now();
-  data.timeStamp = timeStamp;
+  const timestamp = Date.now();
+  data.timeStamp = timestamp;
   database.insert(data);
   response.json(data);
 });

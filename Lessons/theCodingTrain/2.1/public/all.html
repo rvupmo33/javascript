@@ -8,27 +8,50 @@
   <body>
     <h1>Data Selfie App</h1>
     <a href="index.html">Input</a> | <a href="all.html">Data</a>
+
+    <div id="messages"></div>
+
     <script>
-      getData();
-      async function getData() {
-        const response = await fetch("/api");
-        const data = await response.json();
-        for (item of data) {
-          const root = document.createElement("div");
-          const color = document.createElement("div");
-          const geo = document.createElement("div");
-          const date = document.createElement("div");
+      document.addEventListener("DOMContentLoaded", function () {
+        let section = document.getElementById("messages");
 
-          color.textContent = `color: ${item.color}`;
-          geo.textContent = `${item.lat}°, ${item.lon}°`;
-          const dateString = new Date(item.timeStamp).toLocaleString();
-          date.textContent = dateString;
+        getData();
 
-          root.append(color, geo, date);
-          document.body.append(root);
+        async function getData() {
+          try {
+            const response = await fetch("/api");
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const data = await response.json();
+
+            for (let item of data) {
+              // Use 'let' for proper scoping
+              const image = document.createElement("img");
+              const root = document.createElement("div");
+              const color = document.createElement("div");
+              const geo = document.createElement("div");
+              const date = document.createElement("div");
+
+              color.textContent = `Color: ${item.color}`;
+              geo.textContent = `Location: ${item.lat}°, ${item.lon}°`;
+              const dateString = new Date(item.timeStamp).toLocaleString();
+              date.textContent = `Timestamp: ${dateString}`;
+              image.src = item.image64;
+
+              root.style.marginTop = "10px";
+              root.style.padding = "10px";
+              root.style.border = "1px solid black";
+
+              root.append(color, geo, date, image);
+              section.prepend(root);
+            }
+            console.log(data);
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
         }
-        console.log(data);
-      }
+      });
     </script>
   </body>
 </html>

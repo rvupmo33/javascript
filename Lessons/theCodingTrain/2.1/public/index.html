@@ -3,46 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
     <title>Data selfie App</title>
   </head>
   <body>
-    <script>
-      if ("geolocation" in navigator) {
-        console.log("geolocation available");
-        function getGeo() {
-          navigator.geolocation.getCurrentPosition(async (position) => {
-            const lat = position.coords.latitude;
-            document.getElementById("latitude").textContent = lat;
-            const lon = position.coords.longitude;
-            document.getElementById("longitude").textContent = lon;
-            const color = document.getElementById("color").value;
-            const data = { lat, lon, color };
-            const options = {
-              method: "POST",
-              body: JSON.stringify(data),
-              headers: {
-                "Content-Type": "application/json",
-              },
-            };
-            try {
-              const response = await fetch("/api", options);
-              const json = await response.json();
-              console.log(json);
-            } catch (error) {
-              console.error("Error:", error);
-            }
-          });
-        }
-      } else {
-        console.log("geolocation not available");
-      }
-    </script>
     <h1>Data selfie App</h1>
     <a href="index.html">Input</a> | <a href="all.html">Data</a>
     <p>latitude: <span id="latitude"></span>°<br /></p>
     <p>longitude: <span id="longitude"></span>°<br /></p>
     <label>Enter your fav color</label>
     <input id="color" type="text" /><br /><br />
-    <button type="submit" onclick="getGeo()">submit</button><br />
+    <button id="submit" type="submit" onclick="setup()">submit</button><br />
+    <canvas id="defaultCanvas"></canvas>
+    <script src="script.js"></script>
   </body>
 </html>
